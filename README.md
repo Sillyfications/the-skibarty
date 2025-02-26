@@ -6,8 +6,8 @@ You need to install python 3.12 or something, I forgot what the latest version w
 You need to install discord.py and probably some other stuff I don't know.
 
 This bot stores the following:
-Image Links
-Text
+Image Links,
+Text and
 Upload Date
 
 No userids are saved in the database.txt file.
