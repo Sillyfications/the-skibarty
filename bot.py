@@ -138,15 +138,6 @@ async def random(interaction: discord.Interaction):
   print(f"Requested random post, sending postID {number} to user")
   await interaction.response.send_message(f"{message[0]}\nTag: {message[1]} - Posted on {message[3]} - {message[2]} hexadecimal - Takes {message[4]} bytes in storage - PostID: {number}")
 
-@client.tree.command(
-  name="old", description="Posts an old entry from the Beta Skibarty")
-
-async def old(interaction: discord.Interaction):
-  if "messageDB" in database:
-    messageDB = database["messageDB"].split(",")
-    awaitingMessage = choice(messageDB)
-  await interaction.response.send_message(awaitingMessage)
-
 @client.tree.command(name="search", description="Searches for a post in the Skibarty using the post ID")
 @app_commands.describe(id="The ID of the post you are searching for.")
 async def search(interaction: discord.Interaction, id: int):
